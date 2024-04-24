@@ -1,0 +1,30 @@
+Web Service (NetBeans)
+
+Client Servlet Server
+DS-7
+	1. Create a JAVA WEB, WEB APPLICATION Project. And GlassFish 4.1.1
+	2. Add WEB SERVICE to it. (say CalculatorWebService) after creating project
+	3. Test it by (Clean an Build). Deploy. Test Web Service
+	4. Create another project for WebServiceClient same as above !!
+	for consuming:
+	5. Add form tag (action as "CalculatorServlet"), input tag, and submit(input tag with Submit type)
+	6. Now need to add our calculator service to client as:
+		right click on client vala project. Add new WEB SERVICE CLIENT.
+		inside that browse project of calculatorWebService. and select that created
+		web service for calculator (Server we can say)!! Now we get the reference of Server
+		in client !!
+	7. Now neded to create a CalculatorServlet. Who will accept the request from client (form):
+		Right click on client project. Add new SERVLET and give name as same which we have
+		written in action attribute inside form tag. click next. check the check box for deployment.
+		click on finish. The Servlet file will be opened. This file will thw output file.
+		 
+		Now need to add the methods which are in reference in clientService inside this servlet file.
+	8. Now need to add the methods which are in reference in clientService inside this servlet file.
+            For that, drag and drop those referenced methods (each inside that servlet file)
+	9. Fetch the numbers/input from the form in servlet page to perform operations using:
+		request.getParameter("name_of_paramter_used_in_form"), this method returns string
+		bydefault. if need to fetch double values need to typecast it! -> Double.parseDouble();
+	10. Use the method name directly inside the servlet file (inside h1 tag; default je asel te change kr)
+	      like add, divide, etc. and pass the parameters fetched from request!!
+	11. Cleand and build the client project
+	12. Run the file in which we have written form tags (client's index.js)
